@@ -1,0 +1,290 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #ec4899,
+        #f9a8d4
+    );
+}
+
+h1{
+    margin-bottom: 25px;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    color: white;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 4px 15px rgba(255,255,255,0.3);
+}
+
+h1{
+    animation: floatTitle 3s ease-in-out infinite;
+}
+
+@keyframes floatTitle{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-4px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+h1{
+    font-size: 2.5rem;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #dbeafe,
+        #bfdbfe
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather-card{
+    width: 400px;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2);
+
+    text-align: center;
+}
+
+#weatherResult{
+    margin-top: 25px;
+
+    color: white;
+
+    text-align: left;
+}
+
+#weatherResult h2{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#weatherResult p{
+    margin: 20px 0;
+}
+
+#weatherResult{
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+}
+
+#weatherResult{
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+}
+
+.weather-condition{
+    .weather-condition{
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+}
+
+.weather-stats{
+
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.stat-card{
+
+    flex: 1;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.12);
+
+    text-align: center;
+}
+
+.stat-card span{
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255,255,255,0.8);
+}
+
+.stat-card strong{
+
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+@keyframes resultAppear{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-temp{
+    font-size: 4rem;
+    font-weight: bold;
+
+    text-align: center;
+
+    margin: 15px 0;
+
+    color: white;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#weatherResult{
+    animation: fadeIn 0.5s ease;
+}
+.search-box{
+    display: flex;
+    gap: 10px;
+}
+
+#cityInput{
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+#getWeatherBtn{
+    position: relative;
+    overflow: hidden;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+
+    z-index: 1;
+}
+
+#getWeatherBtn::before{
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #0ea5e9
+    );
+
+    transition: left 0.4s ease;
+
+    z-index: -1;
+}
+
+#getWeatherBtn:hover{
+    transform: translateY(-3px);
+    box-shadow:
+0 8px 20px rgba(255,255,255,0.3);
+}
+
+#getWeatherBtn{
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+#getWeatherBtn:hover::before{
+    left: 0;
+}
+
+#weatherResult{
+    margin-top: 25px;
+}
+
+.error-message{
+    color: #ffdddd;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.loading{
+    text-align: center;
+    margin-top: 20px;
+
+    font-size: 1.1rem;
+
+    animation: floatTitle 1.5s infinite;
+}
